@@ -1,0 +1,9 @@
+pip设置镜像源-i https://pypi.douban.com/simple
+打包工具pyinstaller cx_Freeze
+if name==‘mian’:
+#新增
+multiprocessing.freeze_support()
+
+pyinstaller -i ./icon.ico app.py
+打包多进程：
+pyinstaller -w  ./icon.ico  app.py --add-data res;res
