@@ -3,7 +3,7 @@ asn1crypto==1.0.1
 bcrypt==3.1.7
 cffi==1.12.3
 Click==7.0
-cryptography==2.7
+cryptography==3.2
 future==0.18.1
 paramiko==2.6.0
 pefile==2019.4.18
