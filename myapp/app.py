@@ -20,11 +20,11 @@ class SSHtool:
         # 自动添加策略，保存服务器的主机名和密钥信息，如果不添加，那么不再本地know_hosts文件中记录的主机将无法连接
         self.sshclient.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         # 连接SSH服务端，以用户名和密码进行认证
-        self.sshclient.connect(hostname='172.25.113.23', port=22, username='root', password='123456')
+        self.sshclient.connect(hostname='17223', port=22, username='root', password='1236')
 
     def init_trans(self):
         # 实例化SSHClient
-        self.trans = paramiko.Transport(('172.25.113.23', 22))
+        self.trans = paramiko.Transport(('1', 22))
         # 自动添加策略，保存服务器的主机名和密钥信息
         self.trans.connect(username="root", password='123456')
 
@@ -32,7 +32,7 @@ class SSHtool:
         # 实例化SSHClient
         self.trans = paramiko.Transport(('******', 22))
         # 自动添加策略，保存服务器的主机名和密钥信息
-        private_key = paramiko.RSAKey.from_private_key_file('res/id_rsa_2048houduan',password='123456')
+        private_key = paramiko.RSAKey.from_private_key_file('res/id_rsa_2048houduan',password='12456')
         self.trans.connect(username="root",pkey=private_key)
 
 
